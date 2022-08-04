@@ -1,0 +1,11 @@
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\bin\Debug\Visualizer.exe.config
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\bin\Debug\Visualizer.exe
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\bin\Debug\Visualizer.pdb
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\obj\Debug\Game-of-Life.csproj.AssemblyReference.cache
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\obj\Debug\Game-of-Life.csproj.SuggestedBindingRedirects.cache
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\obj\Debug\Visualizer.GameForm.resources
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\obj\Debug\Visualizer.Properties.Resources.resources
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\obj\Debug\Game-of-Life.csproj.GenerateResource.cache
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\obj\Debug\Game-of-Life.csproj.CoreCompileInputs.cache
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\obj\Debug\Visualizer.exe
+C:\Users\!nsane-\source\repos\xvsvg\Game-of-Life\Visualizer\obj\Debug\Visualizer.pdb
