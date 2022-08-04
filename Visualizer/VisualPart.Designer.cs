@@ -38,6 +38,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Field = new System.Windows.Forms.PictureBox();
             this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Speed = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -45,6 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Zoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Density)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Field)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speed)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -58,6 +62,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.Speed);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.PauseFrameButton);
             this.splitContainer1.Panel1.Controls.Add(this.GenerateButton);
             this.splitContainer1.Panel1.Controls.Add(this.Zoom);
@@ -75,7 +81,7 @@
             // PauseFrameButton
             // 
             this.PauseFrameButton.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PauseFrameButton.Location = new System.Drawing.Point(28, 253);
+            this.PauseFrameButton.Location = new System.Drawing.Point(28, 339);
             this.PauseFrameButton.Name = "PauseFrameButton";
             this.PauseFrameButton.Size = new System.Drawing.Size(138, 31);
             this.PauseFrameButton.TabIndex = 6;
@@ -86,7 +92,7 @@
             // GenerateButton
             // 
             this.GenerateButton.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GenerateButton.Location = new System.Drawing.Point(28, 203);
+            this.GenerateButton.Location = new System.Drawing.Point(28, 289);
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.Size = new System.Drawing.Size(138, 33);
             this.GenerateButton.TabIndex = 5;
@@ -119,7 +125,7 @@
             // 
             // Density
             // 
-            this.Density.Location = new System.Drawing.Point(28, 149);
+            this.Density.Location = new System.Drawing.Point(28, 142);
             this.Density.Maximum = new decimal(new int[] {
             10,
             0,
@@ -139,13 +145,12 @@
             0,
             0,
             0});
-            this.Density.ValueChanged += new System.EventHandler(this.Density_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(24, 117);
+            this.label2.Location = new System.Drawing.Point(24, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 20);
             this.label2.TabIndex = 2;
@@ -169,12 +174,45 @@
             this.Field.Size = new System.Drawing.Size(1267, 744);
             this.Field.TabIndex = 0;
             this.Field.TabStop = false;
-            this.Field.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InteractByMouse);
+            this.Field.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawtByMouse);
             // 
             // Timer
             // 
             this.Timer.Interval = 40;
             this.Timer.Tick += new System.EventHandler(this.TimerTick);
+            // 
+            // Speed
+            // 
+            this.Speed.Location = new System.Drawing.Point(28, 226);
+            this.Speed.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.Speed.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Speed.Name = "Speed";
+            this.Speed.Size = new System.Drawing.Size(120, 20);
+            this.Speed.TabIndex = 8;
+            this.Speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Speed.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(24, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Speed of mutations";
             // 
             // GameForm
             // 
@@ -193,6 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Zoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Density)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Field)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speed)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,6 +247,9 @@
         private System.Windows.Forms.Button GenerateButton;
         private System.Windows.Forms.Button PauseFrameButton;
         private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.NumericUpDown Speed;
+        private System.Windows.Forms.Label label3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

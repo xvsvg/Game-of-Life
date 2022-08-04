@@ -47,16 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behavior.cs">
+    <Compile Include="VisualPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Behavior.Designer.cs">
-      <DependentUpon>Behavior.cs</DependentUpon>
+    <Compile Include="VisualPart.Designer.cs">
+      <DependentUpon>VisualPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Runner.cs" />
+    <Compile Include="GameOfLife.Engine.cs" />
+    <Compile Include="VisualRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Behavior.resx">
-      <DependentUpon>Behavior.cs</DependentUpon>
+    <EmbeddedResource Include="VisualPart.resx">
+      <DependentUpon>VisualPart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
